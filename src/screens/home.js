@@ -2,23 +2,13 @@ import React, { Component } from "react";
 import { Col, Row } from "react-bootstrap";
 import Sidebar from "../components/sidebar";
 import RswaggerUI from "../components/swaggerUI";
+import { FilePath } from "../environment";
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      apiList: [
-        {
-          id: 1,
-          name: "Petstore Service",
-          url: `${process.env.PUBLIC_URL}/assets/data/petstore.json`
-        },
-        {
-          id: 2,
-          name: "Identity Service",
-          url: `${process.env.PUBLIC_URL}/assets/data/identity.json`
-        }
-      ],
+      apiList: FilePath,
       selectedApiDoc: undefined
     };
   }
@@ -35,7 +25,7 @@ export default class Home extends Component {
     return (
       <div className="container-fluid">
         <Row>
-          <Col className="col-md-2 d-none d-md-block bg-light sidebar">
+          <Col className="col-md-2 d-none d-md-block sidebar">
             <Sidebar
               selectedApiDoc={this.state.selectedApiDoc}
               apilist={this.state.apiList}

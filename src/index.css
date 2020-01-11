@@ -36,7 +36,7 @@ code {
 .sidebar-sticky {
   position: relative;
   top: 0;
-  height: calc(100vh - 48px);
+  height: calc(100vh - 20px);
   padding-top: 0.5rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
@@ -60,7 +60,7 @@ code {
 }
 
 .sidebar .nav-link.active {
-  color: #007bff;
+  color: #5578eb;
 }
 
 .sidebar .nav-link:hover .feather,
@@ -122,6 +122,13 @@ code {
 
 .list-group-item.active {
   background-color: #fff !important;
-  border: 1px solid #007bff !important;
-  color: #007bff !important;
+  border: 1px solid #5578eb !important;
+  color: #5578eb !important;
+}
+
+.list-group-flush .list-group-item {
+  border-right: 0;
+  border-left: 0;
+  border-top: 0;
+  border-radius: 0;
 }
