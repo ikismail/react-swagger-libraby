@@ -23,9 +23,10 @@ const Sidebar = ({ apilist, selectedApiDoc, onClick }) => {
         })()}
       </ListGroup>
       <div style={{ position: "absolute", bottom: 0 }}>
-        <div className='d-flex'>
+        <div className='d-flex flex-column text-center'>
           <img
             src={`${process.env.PUBLIC_URL}/logo.png`}
+            className="m-auto"
             alt='logo'
             width='110'
             height='70'
